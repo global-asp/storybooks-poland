@@ -51,15 +51,15 @@
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Change language</option>
-		<option value="/storybooks-poland/stories/pl/0095">Polish</option>
-		<option value="/storybooks-poland/stories/en/0095">English</option>
-		<option value="/storybooks-poland/stories/ru/0095">Russian</option>
-		<option value="/storybooks-poland/stories/de/0095">German</option>
-		<option value="/storybooks-poland/stories/fr/0095">French</option>
-		<option value="/storybooks-poland/stories/es/0095">Spanish</option>
-		<option value="/storybooks-poland/stories/it/0095">Italian</option>
-		<option value="/storybooks-poland/stories/uk/0095">Ukrainian</option>
-		<option value="/storybooks-poland/stories/hu/0095">Hungarian</option>
+		<option value="/storybooks-poland/stories/pl/0095">polski</option>
+		<option value="/storybooks-poland/stories/en/0095">angielski</option>
+		<option value="/storybooks-poland/stories/fr/0095">francuski</option>
+		<option value="/storybooks-poland/stories/es/0095">hiszpański</option>
+		<option value="/storybooks-poland/stories/de/0095">niemiecki</option>
+		<option value="/storybooks-poland/stories/ru/0095">rosyjski</option>
+		<option value="/storybooks-poland/stories/uk/0095">ukraiński</option>
+		<option value="/storybooks-poland/stories/hu/0095">węgierski</option>
+		<option value="/storybooks-poland/stories/it/0095">włoski</option>
 	</select>
 </div>
 
@@ -76,7 +76,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/hu/0095/mp3/01.mp3"></audio>
 				<button onclick="switchlang('hu,pl','pl,en,hu')" class="btn btn-lg lang-primary" title="Switch between Hungarian and Polish">pl</button>
-				<button onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
+				<button style="display:none" onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-poland/css/pencil.svg" alt="Written by" width="38px"></span> Michael Oguttu</h3>
@@ -85,6 +85,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-poland/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-poland/stories/hu">Hungarian</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-poland/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-poland/stories/hu/level2">Level 2</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-poland/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/hu/0095/hu-0095_zama.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -113,7 +114,7 @@ am great!
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hu,pl','pl,en,hu')" class="btn btn-lg lang-primary" title="Switch between Hungarian and Polish">pl</button>
-		<button onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
+		<button style="display:none" onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
 	</div>
 </div>
 
@@ -142,7 +143,7 @@ the sun.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hu,pl','pl,en,hu')" class="btn btn-lg lang-primary" title="Switch between Hungarian and Polish">pl</button>
-		<button onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
+		<button style="display:none" onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
 	</div>
 </div>
 
@@ -171,7 +172,7 @@ star," says Ma.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hu,pl','pl,en,hu')" class="btn btn-lg lang-primary" title="Switch between Hungarian and Polish">pl</button>
-		<button onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
+		<button style="display:none" onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
 	</div>
 </div>
 
@@ -200,7 +201,7 @@ need any help.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hu,pl','pl,en,hu')" class="btn btn-lg lang-primary" title="Switch between Hungarian and Polish">pl</button>
-		<button onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
+		<button style="display:none" onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
 	</div>
 </div>
 
@@ -230,7 +231,7 @@ soap.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hu,pl','pl,en,hu')" class="btn btn-lg lang-primary" title="Switch between Hungarian and Polish">pl</button>
-		<button onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
+		<button style="display:none" onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
 	</div>
 </div>
 
@@ -261,7 +262,7 @@ me!"
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hu,pl','pl,en,hu')" class="btn btn-lg lang-primary" title="Switch between Hungarian and Polish">pl</button>
-		<button onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
+		<button style="display:none" onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
 	</div>
 </div>
 
@@ -292,7 +293,7 @@ day.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hu,pl','pl,en,hu')" class="btn btn-lg lang-primary" title="Switch between Hungarian and Polish">pl</button>
-		<button onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
+		<button style="display:none" onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
 	</div>
 </div>
 
@@ -321,7 +322,7 @@ day.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hu,pl','pl,en,hu')" class="btn btn-lg lang-primary" title="Switch between Hungarian and Polish">pl</button>
-		<button onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
+		<button style="display:none" onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
 	</div>
 </div>
 
@@ -350,7 +351,7 @@ and buckle my shoes.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hu,pl','pl,en,hu')" class="btn btn-lg lang-primary" title="Switch between Hungarian and Polish">pl</button>
-		<button onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
+		<button style="display:none" onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
 	</div>
 </div>
 
@@ -380,7 +381,7 @@ school news.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hu,pl','pl,en,hu')" class="btn btn-lg lang-primary" title="Switch between Hungarian and Polish">pl</button>
-		<button onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
+		<button style="display:none" onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
 	</div>
 </div>
 
@@ -409,7 +410,7 @@ every way.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hu,pl','pl,en,hu')" class="btn btn-lg lang-primary" title="Switch between Hungarian and Polish">pl</button>
-		<button onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
+		<button style="display:none" onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
 	</div>
 </div>
 
@@ -441,7 +442,7 @@ play!
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('hu,pl','pl,en,hu')" class="btn btn-lg lang-primary" title="Switch between Hungarian and Polish">pl</button>
-		<button onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
+		<button style="display:none" onclick="switchlang('hu,en','pl,en,hu')" class="btn btn-lg lang-secondary" title="Switch between Hungarian and English">en</button>
 	</div>
 </div>
 

@@ -51,15 +51,15 @@
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Change language</option>
-		<option value="/storybooks-poland/stories/pl/0111">Polish</option>
-		<option value="/storybooks-poland/stories/en/0111">English</option>
-		<option value="/storybooks-poland/stories/ru/0111">Russian</option>
-		<option value="/storybooks-poland/stories/de/0111">German</option>
-		<option value="/storybooks-poland/stories/fr/0111">French</option>
-		<option value="/storybooks-poland/stories/es/0111">Spanish</option>
-		<option value="/storybooks-poland/stories/it/0111">Italian</option>
-		<option value="/storybooks-poland/stories/uk/0111">Ukrainian</option>
-		<option value="/storybooks-poland/stories/hu/0111">Hungarian</option>
+		<option value="/storybooks-poland/stories/pl/0111">polski</option>
+		<option value="/storybooks-poland/stories/en/0111">angielski</option>
+		<option value="/storybooks-poland/stories/fr/0111">francuski</option>
+		<option value="/storybooks-poland/stories/es/0111">hiszpański</option>
+		<option value="/storybooks-poland/stories/de/0111">niemiecki</option>
+		<option value="/storybooks-poland/stories/ru/0111">rosyjski</option>
+		<option value="/storybooks-poland/stories/uk/0111">ukraiński</option>
+		<option value="/storybooks-poland/stories/hu/0111">węgierski</option>
+		<option value="/storybooks-poland/stories/it/0111">włoski</option>
 	</select>
 </div>
 
@@ -76,7 +76,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/de/0111/mp3/01.mp3"></audio>
 				<button onclick="switchlang('de,pl','pl,en,de')" class="btn btn-lg lang-primary" title="Switch between German and Polish">pl</button>
-				<button onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
+				<button style="display:none" onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-poland/css/pencil.svg" alt="Written by" width="38px"></span> Basilio Gimo, David Ker</h3>
@@ -86,6 +86,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-poland/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-poland/stories/de">German</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-poland/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-poland/stories/de/level2">Level 2</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-poland/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/de/0111/de-0111_hippos.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -111,7 +112,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('de,pl','pl,en,de')" class="btn btn-lg lang-primary" title="Switch between German and Polish">pl</button>
-		<button onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
+		<button style="display:none" onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
 	</div>
 </div>
 
@@ -139,7 +140,7 @@
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('de,pl','pl,en,de')" class="btn btn-lg lang-primary" title="Switch between German and Polish">pl</button>
-		<button onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
+		<button style="display:none" onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
 	</div>
 </div>
 
@@ -169,7 +170,7 @@ Rabbit started screaming at Hippo, "You Hippo! Can't you see that you're steppin
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('de,pl','pl,en,de')" class="btn btn-lg lang-primary" title="Switch between German and Polish">pl</button>
-		<button onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
+		<button style="display:none" onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
 	</div>
 </div>
 
@@ -199,7 +200,7 @@ But Rabbit wouldn't listen and he shouted at Hippo, "You did that on purpose! So
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('de,pl','pl,en,de')" class="btn btn-lg lang-primary" title="Switch between German and Polish">pl</button>
-		<button onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
+		<button style="display:none" onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
 	</div>
 </div>
 
@@ -229,7 +230,7 @@ Fire answered, "No problem, Rabbit, my friend. I'll do just what you ask."
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('de,pl','pl,en,de')" class="btn btn-lg lang-primary" title="Switch between German and Polish">pl</button>
-		<button onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
+		<button style="display:none" onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
 	</div>
 </div>
 
@@ -257,7 +258,7 @@ Fire answered, "No problem, Rabbit, my friend. I'll do just what you ask."
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('de,pl','pl,en,de')" class="btn btn-lg lang-primary" title="Switch between German and Polish">pl</button>
-		<button onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
+		<button style="display:none" onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
 	</div>
 </div>
 
@@ -287,7 +288,7 @@ Hippo kept crying, "My hair has burned in the fire! My hair is all gone! My beau
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('de,pl','pl,en,de')" class="btn btn-lg lang-primary" title="Switch between German and Polish">pl</button>
-		<button onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
+		<button style="display:none" onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
 	</div>
 </div>
 
@@ -317,7 +318,7 @@ And to this day, for fear of fire, the hippo never goes far from the water.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('de,pl','pl,en,de')" class="btn btn-lg lang-primary" title="Switch between German and Polish">pl</button>
-		<button onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
+		<button style="display:none" onclick="switchlang('de,en','pl,en,de')" class="btn btn-lg lang-secondary" title="Switch between German and English">en</button>
 	</div>
 </div>
 

@@ -51,15 +51,15 @@
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Change language</option>
-		<option value="/storybooks-poland/stories/pl/0066">Polish</option>
-		<option value="/storybooks-poland/stories/en/0066">English</option>
-		<option value="/storybooks-poland/stories/ru/0066">Russian</option>
-		<option value="/storybooks-poland/stories/de/0066">German</option>
-		<option value="/storybooks-poland/stories/fr/0066">French</option>
-		<option value="/storybooks-poland/stories/es/0066">Spanish</option>
-		<option value="/storybooks-poland/stories/it/0066">Italian</option>
-		<option value="/storybooks-poland/stories/uk/0066">Ukrainian</option>
-		<option value="/storybooks-poland/stories/hu/0066">Hungarian</option>
+		<option value="/storybooks-poland/stories/pl/0066">polski</option>
+		<option value="/storybooks-poland/stories/en/0066">angielski</option>
+		<option value="/storybooks-poland/stories/fr/0066">francuski</option>
+		<option value="/storybooks-poland/stories/es/0066">hiszpański</option>
+		<option value="/storybooks-poland/stories/de/0066">niemiecki</option>
+		<option value="/storybooks-poland/stories/ru/0066">rosyjski</option>
+		<option value="/storybooks-poland/stories/uk/0066">ukraiński</option>
+		<option value="/storybooks-poland/stories/hu/0066">węgierski</option>
+		<option value="/storybooks-poland/stories/it/0066">włoski</option>
 	</select>
 </div>
 
@@ -76,7 +76,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/ru/0066/mp3/01.mp3"></audio>
 				<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-				<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+				<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-poland/css/pencil.svg" alt="Written by" width="38px"></span> Tessa Welch</h3>
@@ -85,6 +85,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-poland/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-poland/stories/ru">Russian</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-poland/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-poland/stories/ru/level3">Level 3</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-poland/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/ru/0066/ru-0066_nozibele.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -111,7 +112,7 @@ out to collect wood.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-		<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+		<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 	</div>
 </div>
 
@@ -142,7 +143,7 @@ swam in the water.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-		<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+		<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 	</div>
 </div>
 
@@ -172,7 +173,7 @@ They hurried back to the village.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-		<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+		<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 	</div>
 </div>
 
@@ -205,7 +206,7 @@ But her friends said it was too late.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-		<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+		<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 	</div>
 </div>
 
@@ -237,7 +238,7 @@ But she got lost in the dark.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-		<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+		<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 	</div>
 </div>
 
@@ -268,7 +269,7 @@ at the door.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-		<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+		<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 	</div>
 </div>
 
@@ -302,7 +303,7 @@ So Nozibele went in.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-		<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+		<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 	</div>
 </div>
 
@@ -335,7 +336,7 @@ the dog.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-		<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+		<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 	</div>
 </div>
 
@@ -369,7 +370,7 @@ So Nozibele made the bed.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-		<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+		<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 	</div>
 </div>
 
@@ -403,7 +404,7 @@ before I come back."
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-		<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+		<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 	</div>
 </div>
 
@@ -438,7 +439,7 @@ could.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-		<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+		<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 	</div>
 </div>
 
@@ -475,7 +476,7 @@ third hair.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-		<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+		<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 	</div>
 </div>
 
@@ -510,7 +511,7 @@ has never been seen since.
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('ru,pl','pl,en,ru')" class="btn btn-lg lang-primary" title="Switch between Russian and Polish">pl</button>
-		<button onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
+		<button style="display:none" onclick="switchlang('ru,en','pl,en,ru')" class="btn btn-lg lang-secondary" title="Switch between Russian and English">en</button>
 	</div>
 </div>
 

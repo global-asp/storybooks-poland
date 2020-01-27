@@ -112,3 +112,8 @@ function autoplay() {
 
   audio.play();
 }
+
+function pdfdl() {
+  m = window['modal-pdf'];
+  m.className == "modal" ? m.className += " active" : m.className = "modal";
+}

@@ -4,13 +4,13 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="apple-touch-icon" sizes="180x180" href="/storybooks-poland/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/storybooks-poland/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/storybooks-poland/favicon-16x16.png">
-	<link rel="manifest" href="/storybooks-poland/site.webmanifest">
-	<link rel="mask-icon" href="/storybooks-poland/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href=/storybooks-poland/favicon.ico?v=2">
-	<meta name="msapplication-TileColor" content="#da532c">
+	<link rel="apple-touch-icon" sizes="180x180" href="/storybooks-poland/apple-touch-icon.png?v=4">
+	<link rel="icon" type="image/png" sizes="32x32" href="/storybooks-poland/favicon-32x32.png?v=4">
+	<link rel="icon" type="image/png" sizes="16x16" href="/storybooks-poland/favicon-16x16.png?v=4">
+	<link rel="manifest" href="/storybooks-poland/site.webmanifest?v=4">
+	<link rel="mask-icon" href="/storybooks-poland/safari-pinned-tab.svg?v=4" color="#5bbad5">
+	<link rel="shortcut icon" href="/storybooks-poland/favicon.ico?v=4">
+	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
 	<title>Zama yra šaunuolė - Storybooks Poland</title>
 	<meta name="description" content="Storybooks Poland is designed specifically for teachers, parents, and community members and makes 40 stories from the African Storybook available with text and audio in Polish and English, as well as the most widely spoken languages of Poland.
@@ -20,12 +20,10 @@
 	<link rel="stylesheet" href="/storybooks-poland/css/fontello.min.css">
 	<link rel="canonical" href="https://global-asp.github.io//storybooks-poland/stories/lt/0095/">
 	<link rel="alternate" type="application/rss+xml" title="Storybooks Poland" href="/storybooks-poland">
-	<script src="/storybooks-poland/js/sbc.js"></script>
+	<script src="/storybooks-poland/js/sbc.min.js"></script>
 </head>
 
-
   <body>
-
 
     <div class="container">
 
@@ -49,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download options</a></div>
+        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -73,64 +71,25 @@
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1><span class="def">Zama yra šaunuolė</span>
 			<span class="l1">Zama jest świetna!</span>
-			<span class="l2">Zama is great!</span>
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
 			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
-			<button onclick="switchlang('lt,pl','pl,en,lt')" class="btn btn-lg lang-primary" title="Switch between Lithuanian and Polish">pl</button>
-			<button style="display:none" onclick="switchlang('lt,en','pl,en,lt')" class="btn btn-lg lang-secondary" title="Switch between Lithuanian and English">en</button>
+			<button onclick="switchlang('lt,pl','pl,lt')" class="btn btn-lg lang-primary" title="Switch between litewski and polski">pl</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/pencil.svg" alt="Written by"></span> Michael Oguttu</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/art.svg" alt="Illustrated by"></span> Vusi Malindi</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/global.svg" alt="Translated by"></span> Lina Baltrukoniene</h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/language.svg" alt="Language"></span> <a href="/storybooks-poland/stories/lt">Lithuanian</a></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/language.svg" alt="Language"></span> <a href="/storybooks-poland/stories/lt">litewski</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/level.svg" alt="Level"></span> <a href="/storybooks-poland/stories/lt/level2">Level 2</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/speaker.svg" alt="Narrate full story"></span> <span class="cover_msg">The audio for this story is currently not available.</span></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
+
 	</div>
-</div>
-<div class="modal" id="modal-pdf">
-  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
-  <div class="modal-container">
-    <div class="modal-header">
-      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
-      <div class="modal-title h5">Download options</div>
-    </div>
-    <div class="modal-body">
-      <div class="content">
-        <h4>Regular PDFs (full-page)</h4>
-        <ul>
-          <li><strong><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/pdf/lt/lt-0095_zama.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/storybooks-poland/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/wordless/0095_zama-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/storybooks-poland/css/editions/landscape-wordless.svg" width="100"></center></a></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/imageless/lt/lt-0095_zama-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/storybooks-poland/css/editions/landscape-imageless.svg" width="100"></center></a></li>
-        </ul>
-
-        <h4>Bilingual PDFs</h4>
-        <ul>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/bilingual/lt-pl/0095_zama-bilingual_lt-pl.pdf" target="_blank">Bilingual PDF (Lithuanian-Polish, landscape)<br><center><img src="/storybooks-poland/css/editions/landscape-bil1.svg" width="100"></center></a></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/imageless-bilingual/lt-pl/0095_zama-imageless-bilingual_lt-pl.pdf" target="_blank">Bilingual imageless PDF (Lithuanian-Polish, landscape)<br><center><img src="/storybooks-poland/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
-        </ul>
-
-        <h4>Booklet PDFs (for printing)</h4>
-        <ul>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/booklet/lt/lt-0095_zama-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/storybooks-poland/css/editions/booklet-mono.svg" width="100"></center></a></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/bilingual-booklet/lt-pl/0095_zama-bilingual_lt-pl-booklet.pdf" target="_blank">Bilingual booklet PDF (Lithuanian-Polish)<br><center><img src="/storybooks-poland/css/editions/booklet-bil1.svg" width="100"></center></a></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/wordless-booklet/0095_zama-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/storybooks-poland/css/editions/booklet-wordless.svg" width="100"></center></a></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/imageless-booklet/lt/lt-0095_zama-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/storybooks-poland/css/editions/booklet-imageless.svg" width="100"></center></a></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/imageless-bilingual-booklet//lt-pl/0095_zama-imageless-bilingual_lt-pl-booklet.pdf" target="_blank">Bilingual imageless booklet (Lithuanian-Polish)<br><center><img src="/storybooks-poland/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="modal-footer">
-      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
-    </div>
-  </div>
 </div>
 
 <hr>
 
-<div id="text02" class="columns">
+        <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
 	Mano broliukas miega labai ilgai. Aš atsibundu anksti, nes esu šaunuolė!
@@ -139,12 +98,7 @@
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	Mój młodszy braciszek długo rano śpi. Ja budzę się wcześnie rano, bo jestem świetna!
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
-	My little brother sleeps
-very late.
-I wake early, because I
-am great!
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -152,8 +106,7 @@ am great!
 		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lt,pl','pl,en,lt')" class="btn btn-lg lang-primary" title="Switch between Lithuanian and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('lt,en','pl,en,lt')" class="btn btn-lg lang-secondary" title="Switch between Lithuanian and English">en</button>
+		<button onclick="switchlang('lt,pl','pl,lt')" class="btn btn-lg lang-primary" title="Switch between litewski and polski">pl</button>
 	</div>
 </div>
 
@@ -169,10 +122,7 @@ am great!
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	To ja wpuszczam słoneczne światło.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
-	I am the one who lets in
-the sun.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -180,8 +130,7 @@ the sun.
 		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lt,pl','pl,en,lt')" class="btn btn-lg lang-primary" title="Switch between Lithuanian and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('lt,en','pl,en,lt')" class="btn btn-lg lang-secondary" title="Switch between Lithuanian and English">en</button>
+		<button onclick="switchlang('lt,pl','pl,lt')" class="btn btn-lg lang-primary" title="Switch between litewski and polski">pl</button>
 	</div>
 </div>
 
@@ -197,10 +146,7 @@ the sun.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	„Jesteś moją poranną gwiazdką” – mówi mama.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
-	“You’re my morning
-star,” says Ma.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -208,8 +154,7 @@ star,” says Ma.
 		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lt,pl','pl,en,lt')" class="btn btn-lg lang-primary" title="Switch between Lithuanian and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('lt,en','pl,en,lt')" class="btn btn-lg lang-secondary" title="Switch between Lithuanian and English">en</button>
+		<button onclick="switchlang('lt,pl','pl,lt')" class="btn btn-lg lang-primary" title="Switch between litewski and polski">pl</button>
 	</div>
 </div>
 
@@ -225,10 +170,7 @@ star,” says Ma.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	Sama się myję, nie potrzebuję niczyjej pomocy.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
-	I wash myself, I don’t
-need any help.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -236,8 +178,7 @@ need any help.
 		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lt,pl','pl,en,lt')" class="btn btn-lg lang-primary" title="Switch between Lithuanian and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('lt,en','pl,en,lt')" class="btn btn-lg lang-secondary" title="Switch between Lithuanian and English">en</button>
+		<button onclick="switchlang('lt,pl','pl,lt')" class="btn btn-lg lang-primary" title="Switch between litewski and polski">pl</button>
 	</div>
 </div>
 
@@ -253,11 +194,7 @@ need any help.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	Radzę sobie z zimną wodą i niebieskim mydłem.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
-	I can cope with cold
-water and blue smelly
-soap.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -265,8 +202,7 @@ soap.
 		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lt,pl','pl,en,lt')" class="btn btn-lg lang-primary" title="Switch between Lithuanian and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('lt,en','pl,en,lt')" class="btn btn-lg lang-secondary" title="Switch between Lithuanian and English">en</button>
+		<button onclick="switchlang('lt,pl','pl,lt')" class="btn btn-lg lang-primary" title="Switch between litewski and polski">pl</button>
 	</div>
 </div>
 
@@ -282,12 +218,7 @@ soap.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	„Nie zapomnij o zębach” – przypomina mi mama. „Ja? Nigdy” – odpowiadam.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
-	Ma reminds, “Don’t
-forget teeth.”
-I reply, “Never, not
-me!”
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -295,8 +226,7 @@ me!”
 		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lt,pl','pl,en,lt')" class="btn btn-lg lang-primary" title="Switch between Lithuanian and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('lt,en','pl,en,lt')" class="btn btn-lg lang-secondary" title="Switch between Lithuanian and English">en</button>
+		<button onclick="switchlang('lt,pl','pl,lt')" class="btn btn-lg lang-primary" title="Switch between litewski and polski">pl</button>
 	</div>
 </div>
 
@@ -312,12 +242,7 @@ me!”
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	Po umyciu, witam się z dziadkiem i ciocią, życzę im miłego dnia.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
-	After washing, I greet
-Grandpa and Auntie,
-and wish them a good
-day.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text07" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -325,8 +250,7 @@ day.
 		<button class="btn btn-lg disabled" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lt,pl','pl,en,lt')" class="btn btn-lg lang-primary" title="Switch between Lithuanian and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('lt,en','pl,en,lt')" class="btn btn-lg lang-secondary" title="Switch between Lithuanian and English">en</button>
+		<button onclick="switchlang('lt,pl','pl,lt')" class="btn btn-lg lang-primary" title="Switch between litewski and polski">pl</button>
 	</div>
 </div>
 
@@ -342,10 +266,7 @@ day.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	Potem się ubieram. „Jestem już duża” – mówię do mamy.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
-	Then I dress myself,
-“I’m big now Ma,” I say.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text08" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -353,8 +274,7 @@ day.
 		<button class="btn btn-lg disabled" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lt,pl','pl,en,lt')" class="btn btn-lg lang-primary" title="Switch between Lithuanian and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('lt,en','pl,en,lt')" class="btn btn-lg lang-secondary" title="Switch between Lithuanian and English">en</button>
+		<button onclick="switchlang('lt,pl','pl,lt')" class="btn btn-lg lang-primary" title="Switch between litewski and polski">pl</button>
 	</div>
 </div>
 
@@ -370,10 +290,7 @@ day.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	Potrafię zapiąć swoje guziki i zapiąć swoje buty.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
-	I can close my buttons
-and buckle my shoes.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text09" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -381,8 +298,7 @@ and buckle my shoes.
 		<button class="btn btn-lg disabled" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lt,pl','pl,en,lt')" class="btn btn-lg lang-primary" title="Switch between Lithuanian and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('lt,en','pl,en,lt')" class="btn btn-lg lang-secondary" title="Switch between Lithuanian and English">en</button>
+		<button onclick="switchlang('lt,pl','pl,lt')" class="btn btn-lg lang-primary" title="Switch between litewski and polski">pl</button>
 	</div>
 </div>
 
@@ -398,11 +314,7 @@ and buckle my shoes.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	Upewniam się, że mój młodszy braciszek jest gotowy do szkoły.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
-	And I make sure little
-brother knows all the
-school news.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text10" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -410,8 +322,7 @@ school news.
 		<button class="btn btn-lg disabled" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lt,pl','pl,en,lt')" class="btn btn-lg lang-primary" title="Switch between Lithuanian and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('lt,en','pl,en,lt')" class="btn btn-lg lang-secondary" title="Switch between Lithuanian and English">en</button>
+		<button onclick="switchlang('lt,pl','pl,lt')" class="btn btn-lg lang-primary" title="Switch between litewski and polski">pl</button>
 	</div>
 </div>
 
@@ -427,10 +338,7 @@ school news.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	Każdego dnia w szkole staram się jak najlepiej potrafię.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
-	In class I do my best in
-every way.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text11" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -438,8 +346,7 @@ every way.
 		<button class="btn btn-lg disabled" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lt,pl','pl,en,lt')" class="btn btn-lg lang-primary" title="Switch between Lithuanian and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('lt,en','pl,en,lt')" class="btn btn-lg lang-secondary" title="Switch between Lithuanian and English">en</button>
+		<button onclick="switchlang('lt,pl','pl,lt')" class="btn btn-lg lang-primary" title="Switch between litewski and polski">pl</button>
 	</div>
 </div>
 
@@ -455,13 +362,7 @@ every way.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	Wykonuję wszystkie te zadania każdego dnia. Ale mimo to, i tak najbardziej cieszą mnie zabawa, psoty i figle!
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
-	I do all these good
-things every day.
-But the thing I like
-most, is to play and
-play!
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text12" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -469,22 +370,22 @@ play!
 		<button class="btn btn-lg disabled" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lt,pl','pl,en,lt')" class="btn btn-lg lang-primary" title="Switch between Lithuanian and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('lt,en','pl,en,lt')" class="btn btn-lg lang-secondary" title="Switch between Lithuanian and English">en</button>
+		<button onclick="switchlang('lt,pl','pl,lt')" class="btn btn-lg lang-primary" title="Switch between litewski and polski">pl</button>
 	</div>
 </div>
 
 </div>
 <hr>
 
-<div id="colophon" class="columns">
+
+        <div id="colophon" class="columns">
 	<div class="column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h5>Written by: Michael Oguttu</h5>
-		<h5>Illustrated by: Vusi Malindi</h5>
-		<h5>Translated by: Lina Baltrukoniene</h5>
-		<h5>Language: <a href="/storybooks-poland/stories/lt">Lithuanian</a></h5>
-		<h5><a href="/storybooks-poland/stories/lt/level2">Level 2</a></h5>
-		<h5>Source: <a href="https://africanstorybook.org/reader.php?id=9984" target="_blank">Zama is great!</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>
+		<h5><span class="colophon-heading">Written by:</span> Michael Oguttu</h5>
+		<h5><span class="colophon-heading">Illustrated by:</span> Vusi Malindi</h5>
+		<h5><span class="colophon-heading">Translated by:</span> Lina Baltrukoniene</h5>
+		<h5><span class="colophon-heading">Language:</span> <a href="/storybooks-poland/stories/lt">litewski</a></h5>
+		<h5><span class="colophon-heading">Level:</span> <a href="/storybooks-poland/stories/lt/level2">Level 2</a></h5>
+		<h5><span class="colophon-heading">Source:</span> <a href="https://africanstorybook.org/reader.php?id=9984" target="_blank">Zama is great!</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>
 
 		<div><a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 International License</a>.</div>
 
@@ -497,10 +398,9 @@ play!
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/storybooks-poland/stories/lt">Back to stories list</a> <a class="btn btn-lg" target="_blank" href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/pdf/lt/lt-0095_zama.pdf">Download PDF</a>
+	<a class="btn btn-lg" href="/storybooks-poland/stories/lt" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
 <br><br>
 </div>
-
 
 
     </div>

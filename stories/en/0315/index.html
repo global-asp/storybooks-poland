@@ -4,13 +4,13 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="apple-touch-icon" sizes="180x180" href="/storybooks-poland/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/storybooks-poland/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/storybooks-poland/favicon-16x16.png">
-	<link rel="manifest" href="/storybooks-poland/site.webmanifest">
-	<link rel="mask-icon" href="/storybooks-poland/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href=/storybooks-poland/favicon.ico?v=2">
-	<meta name="msapplication-TileColor" content="#da532c">
+	<link rel="apple-touch-icon" sizes="180x180" href="/storybooks-poland/apple-touch-icon.png?v=4">
+	<link rel="icon" type="image/png" sizes="32x32" href="/storybooks-poland/favicon-32x32.png?v=4">
+	<link rel="icon" type="image/png" sizes="16x16" href="/storybooks-poland/favicon-16x16.png?v=4">
+	<link rel="manifest" href="/storybooks-poland/site.webmanifest?v=4">
+	<link rel="mask-icon" href="/storybooks-poland/safari-pinned-tab.svg?v=4" color="#5bbad5">
+	<link rel="shortcut icon" href="/storybooks-poland/favicon.ico?v=4">
+	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
 	<title>Sakima’s song - Storybooks Poland</title>
 	<meta name="description" content="Storybooks Poland is designed specifically for teachers, parents, and community members and makes 40 stories from the African Storybook available with text and audio in Polish and English, as well as the most widely spoken languages of Poland.
@@ -20,12 +20,10 @@
 	<link rel="stylesheet" href="/storybooks-poland/css/fontello.min.css">
 	<link rel="canonical" href="https://global-asp.github.io//storybooks-poland/stories/en/0315/">
 	<link rel="alternate" type="application/rss+xml" title="Storybooks Poland" href="/storybooks-poland">
-	<script src="/storybooks-poland/js/sbc.js"></script>
+	<script src="/storybooks-poland/js/sbc.min.js"></script>
 </head>
 
-
   <body>
-
 
     <div class="container">
 
@@ -49,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download options</a></div>
+        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -73,65 +71,27 @@
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1><span class="def">Sakima’s song</span>
 			<span class="l1">Piosenka Sakimy</span>
-			<span class="l2">Sakima's song</span>
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
 			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/01.mp3"></audio>
-			<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-			<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+			<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/pencil.svg" alt="Written by"></span> Ursula Nafula</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/art.svg" alt="Illustrated by"></span> Peris Wachuka</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Read by"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/megaphone.svg" alt="Read by"></span> Darshan Soni</h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/language.svg" alt="Language"></span> <a href="/storybooks-poland/stories/en">English</a></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/language.svg" alt="Language"></span> <a href="/storybooks-poland/stories/en">angielski</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/level.svg" alt="Level"></span> <a href="/storybooks-poland/stories/en/level3">Level 3</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-audio" src="/storybooks-poland/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/en/0315/en-0315_sakima.mp3" type="audio/mpeg"></audio></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Reading speed"><img class="cover-icon cover-icon-text" src="/storybooks-poland/css/speedometer.svg" alt="Reading speed" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Reading speed: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-poland/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
-</div>
-<div class="modal" id="modal-pdf">
-  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
-  <div class="modal-container">
-    <div class="modal-header">
-      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
-      <div class="modal-title h5">Download options</div>
-    </div>
-    <div class="modal-body">
-      <div class="content">
-        <h4>Regular PDFs (full-page)</h4>
-        <ul>
-          <li><strong><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/pdf/en/en-0315_sakima.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/storybooks-poland/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/wordless/0315_sakima-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/storybooks-poland/css/editions/landscape-wordless.svg" width="100"></center></a></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/imageless/en/en-0315_sakima-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/storybooks-poland/css/editions/landscape-imageless.svg" width="100"></center></a></li>
-        </ul>
-
-        <h4>Bilingual PDFs</h4>
-        <ul>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/bilingual/en-pl/0315_sakima-bilingual_en-pl.pdf" target="_blank">Bilingual PDF (English-Polish, landscape)<br><center><img src="/storybooks-poland/css/editions/landscape-bil1.svg" width="100"></center></a></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/imageless-bilingual/en-pl/0315_sakima-imageless-bilingual_en-pl.pdf" target="_blank">Bilingual imageless PDF (English-Polish, landscape)<br><center><img src="/storybooks-poland/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
-        </ul>
-
-        <h4>Booklet PDFs (for printing)</h4>
-        <ul>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/booklet/en/en-0315_sakima-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/storybooks-poland/css/editions/booklet-mono.svg" width="100"></center></a></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/bilingual-booklet/en-pl/0315_sakima-bilingual_en-pl-booklet.pdf" target="_blank">Bilingual booklet PDF (English-Polish)<br><center><img src="/storybooks-poland/css/editions/booklet-bil1.svg" width="100"></center></a></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/wordless-booklet/0315_sakima-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/storybooks-poland/css/editions/booklet-wordless.svg" width="100"></center></a></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/imageless-booklet/en/en-0315_sakima-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/storybooks-poland/css/editions/booklet-imageless.svg" width="100"></center></a></li>
-          <li><a href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/imageless-bilingual-booklet//en-pl/0315_sakima-imageless-bilingual_en-pl-booklet.pdf" target="_blank">Bilingual imageless booklet (English-Polish)<br><center><img src="/storybooks-poland/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="modal-footer">
-      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
-    </div>
-  </div>
 </div>
 
 <hr>
 
-<div id="text02" class="columns">
+        <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
 	Sakima lived with his parents and his four year old sister.
@@ -144,23 +104,16 @@ Their grass-thatched hut was at the end of a row of trees.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	Sakima mieszkał z rodzicami i czteroletnią siostrą na lądzie bogacza. Mieszkali w pokrytej trawą chacie, która stała blisko drzew.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	Sakima lived with his parents and his four year old sister.
 
-They lived on a rich man’s land.
-
-Their grass-thatched hut was at the end of a row of trees.
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/02.mp3"></audio>
+		<audio id="audio02" src="https://globalstorybooks.net/media/audio/en/0315/mp3/02.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -178,21 +131,16 @@ Sakima was a talented boy.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	Gdy Sakima miał trzy lata, zachorował i stracił wzrok. Ale mimo to, był utalentowanym chłopcem.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	When Sakima was three years old, he fell sick and lost his sight.
 
-Sakima was a talented boy.
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/03.mp3"></audio>
+		<audio id="audio03" src="https://globalstorybooks.net/media/audio/en/0315/mp3/03.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -210,21 +158,16 @@ For example, he could sit with older members of the village and discuss importan
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	Sakima robił wiele rzeczy, których nie potrafili robić jego rówieśnicy. Zasiadał na przykład ze starszymi w wiosce i omawiał z nimi ważne sprawy.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	Sakima did many things that other six year old boys did not do.
 
-For example, he could sit with older members of the village and discuss important matters.
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/04.mp3"></audio>
+		<audio id="audio04" src="https://globalstorybooks.net/media/audio/en/0315/mp3/04.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -244,23 +187,16 @@ Sakima was left with his little sister.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	Rodzice Sakima pracowali na lądzie bogacza. Wychodzili z domu wcześnie rano i wracali późnym wieczorem. Sakima zostawał wtedy w domu, aby opiekować się siostrą.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	The parents of Sakima worked at the rich man’s house.
 
-They left home early in the morning and returned late in the evening.
-
-Sakima was left with his little sister.
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/05.mp3"></audio>
+		<audio id="audio05" src="https://globalstorybooks.net/media/audio/en/0315/mp3/05.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -278,21 +214,16 @@ One day his mother asked him, “Where do you learn these songs from, Sakima?”
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	Sakima uwielbiał śpiewać. Pewnego dnia matka zapytała go: „Skąd znasz te wszystkie piosenki?”
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	Sakima loved to sing songs.
 
-One day his mother asked him, “Where do you learn these songs from, Sakima?”
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/06.mp3"></audio>
+		<audio id="audio06" src="https://globalstorybooks.net/media/audio/en/0315/mp3/06.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -308,19 +239,16 @@ One day his mother asked him, “Where do you learn these songs from, Sakima?”
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	„Słyszę je w mojej głowie i śpiewam, po prostu przychodzą do mnie” – odpowiedział chłopiec.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	Sakima answered, “They just come, mother. I hear them in my head and then I sing.”
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text08" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/07.mp3"></audio>
+		<audio id="audio07" src="https://globalstorybooks.net/media/audio/en/0315/mp3/07.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -340,23 +268,16 @@ She would sway to the soothing tune.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	Sakima lubił śpiewać dla młodszej siostry, szczególnie, gdy była głodna. Siostra słuchała, gdy śpiewał swoją ulubioną piosenkę i kołysała się w jej rytm.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	Sakima liked to sing for his little sister, especially, if she felt hungry.
 
-His sister would listen to him singing his favourite song.
-
-She would sway to the soothing tune.
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text07" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text09" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio08" onended="resetbutton('08')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/08.mp3"></audio>
+		<audio id="audio08" src="https://globalstorybooks.net/media/audio/en/0315/mp3/08.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -374,21 +295,16 @@ Sakima would accept and sing it over and over again.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	„Sakima, czy możesz zaśpiewać tę piosenkę jeszcze raz?” – prosiła. Sakima zgadzał się i śpiewał piosenkę od początku.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	“Can you sing it again and again, Sakima,” his sister would beg him.
 
-Sakima would accept and sing it over and over again.
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text08" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text10" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio09" onended="resetbutton('09')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/09.mp3"></audio>
+		<audio id="audio09" src="https://globalstorybooks.net/media/audio/en/0315/mp3/09.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -406,21 +322,16 @@ Sakima knew that there was something wrong.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	Pewnego dnia, gdy rodzice wrócili do domu byli bardzo małomówni. Sakima czuł, że coś się stało.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	One evening when his parents returned home, they were very quiet.
 
-Sakima knew that there was something wrong.
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text09" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text11" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio10" onended="resetbutton('10')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/10.mp3"></audio>
+		<audio id="audio10" src="https://globalstorybooks.net/media/audio/en/0315/mp3/10.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -440,23 +351,16 @@ The man was very sad and lonely.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	„Mamo, tato, co się stało?” – zapytał chłopiec. Okazało się, że zaginął syn bogacza. Bogacz był załamany.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	“What is wrong, mother, father?” Sakima asked.
 
-Sakima learned that the rich man’s son was missing.
-
-The man was very sad and lonely.
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text10" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text12" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio11" onended="resetbutton('11')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/11.mp3"></audio>
+		<audio id="audio11" src="https://globalstorybooks.net/media/audio/en/0315/mp3/11.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -476,23 +380,16 @@ But his parents dismissed him.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	„Zaśpiewam dla niego. Może znowu będzie szczęśliwy” – Sakima zaproponował. Rodzicom nie podobał się ten pomysł: „To jest bardzo bogaty człowiek, a ty jesteś tylko niewidomym chłopcem. Naprawdę myślisz, że możesz pomóc bogaczowi?”
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	“I can sing for him. He might be happy again,” Sakima told his parents.
 
-But his parents dismissed him.
-
-“He is very rich. You are only a blind boy. Do you think your song will help him?”
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text11" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text13" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio12" onended="resetbutton('12')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/12.mp3"></audio>
+		<audio id="audio12" src="https://globalstorybooks.net/media/audio/en/0315/mp3/12.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -512,23 +409,16 @@ She said, “Sakima’s songs soothe me when I am hungry. They will soothe the r
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	Sakima nie poddawał się. Jego siostra postanowiła go wesprzeć: „Piosenki Sakima pomagają mi, gdy jestem głodna. Pomogą również bogaczowi!”
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	However, Sakima did not give up.
 
-His little sister supported him.
-
-She said, “Sakima’s songs soothe me when I am hungry. They will soothe the rich man too.”
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text12" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text14" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio13" onended="resetbutton('13')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/13.mp3"></audio>
+		<audio id="audio13" src="https://globalstorybooks.net/media/audio/en/0315/mp3/13.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -544,19 +434,16 @@ She said, “Sakima’s songs soothe me when I am hungry. They will soothe the r
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	Następnego dnia Sakima poprosił siostrę, aby zaprowadziła go do domu bogacza.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	The following day, Sakima asked his little sister to lead him to the rich man’s house.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text13" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text15" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio14" onended="resetbutton('14')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/14.mp3"></audio>
+		<audio id="audio14" src="https://globalstorybooks.net/media/audio/en/0315/mp3/14.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -574,21 +461,16 @@ Slowly, the head of the rich man began to show through the big window.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	Sakima stanął pod dużym oknem domu bogacza i zaczął śpiewać swoją ulubioną pieśń. Po chwili z okna wychyliła się głowa bogacza.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	He stood below one big window and began to sing his favourite song.
 
-Slowly, the head of the rich man began to show through the big window.
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text14" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text16" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio15" onended="resetbutton('15')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/15.mp3"></audio>
+		<audio id="audio15" src="https://globalstorybooks.net/media/audio/en/0315/mp3/15.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -606,21 +488,16 @@ But one man said, “Nobody has been able to console the boss. Does this blind b
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	Pracownicy bogacza zaprzestali pracy, aby posłuchać głosu Sakima. Jeden z nich powiedział: „Nikt nie był w stanie pocieszyć bogacza. Czy ten niewidomy chłopiec naprawdę myśli, że może go pocieszyć?”
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	The workers stopped what they were doing. They listened to Sakima’s beautiful song.
 
-But one man said, “Nobody has been able to console the boss. Does this blind boy think he will console him?”
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text15" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text17" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio16" onended="resetbutton('16')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/16.mp3"></audio>
+		<audio id="audio16" src="https://globalstorybooks.net/media/audio/en/0315/mp3/16.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -638,21 +515,16 @@ But the rich man rushed out and said, “Please sing again.”
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	Sakima skończył śpiewać i odwrócił się, aby odejść. Ku zaskoczeniu wszystkich, bogacz wybiegł z domu i powiedział: „Proszę zaśpiewaj jeszcze raz.”
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	Sakima finished singing his song and turned to leave.
 
-But the rich man rushed out and said, “Please sing again.”
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text16" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text18" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio17" onended="resetbutton('17')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/17.mp3"></audio>
+		<audio id="audio17" src="https://globalstorybooks.net/media/audio/en/0315/mp3/17.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -670,21 +542,16 @@ They had found the rich man’s son beaten up and left on the side of the road.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	W tym samym momencie, dwóch mężczyzn przyniosło kogoś na noszach. Był to syn bogacza, którego znaleziono pobitego na poboczu drogi.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	At that very moment, two men came carrying someone on a stretcher.
 
-They had found the rich man’s son beaten up and left on the side of the road.
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text17" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text19" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio18" onended="resetbutton('18')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/18.mp3"></audio>
+		<audio id="audio18" src="https://globalstorybooks.net/media/audio/en/0315/mp3/18.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton18" onclick="playpause('18')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
@@ -704,37 +571,31 @@ He took his son and Sakima to hospital so Sakima could regain his sight.
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
 	Bogacz był bardzo szczęśliwy, że jego syn się odnalazł! Zabierając swojego syna do szpitala, zabrał tam również Sakimę, aby lekarze pomogli mu odzyskać wzrok. Chciał w ten sposób podziękować Sakimie za jego pomoc.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	The rich man was so happy to see his son again.
 
-He rewarded Sakima for consoling him.
-
-He took his son and Sakima to hospital so Sakima could regain his sight.
-	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text18" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
-		<audio id="audio19" onended="resetbutton('19')" src="https://globalstorybooks.net/media/audio/en/0315/mp3/19.mp3"></audio>
+		<audio id="audio19" src="https://globalstorybooks.net/media/audio/en/0315/mp3/19.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton19" onclick="playpause('19')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,pl','pl,en,en')" class="btn btn-lg lang-primary" title="Switch between English and Polish">pl</button>
-		<button style="display:none" onclick="switchlang('en,en','pl,en,en')" class="btn btn-lg lang-secondary" title="Switch between English and English">en</button>
+		<button onclick="switchlang('en,pl','pl,en')" class="btn btn-lg lang-primary" title="Switch between angielski and polski">pl</button>
 	</div>
 </div>
 
 </div>
 <hr>
 
-<div id="colophon" class="columns">
+
+        <div id="colophon" class="columns">
 	<div class="column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h5>Written by: Ursula Nafula</h5>
-		<h5>Illustrated by: Peris Wachuka</h5>
-		<h5>Read by: Darshan Soni</h5>
-		<h5>Language: <a href="/storybooks-poland/stories/en">English</a></h5>
-		<h5><a href="/storybooks-poland/stories/en/level3">Level 3</a></h5>
-		<h5>Source: <a href="https://africanstorybook.org/reader.php?id=13244" target="_blank">Sakima's song</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>
+		<h5><span class="colophon-heading">Written by:</span> Ursula Nafula</h5>
+		<h5><span class="colophon-heading">Illustrated by:</span> Peris Wachuka</h5>
+		<h5><span class="colophon-heading">Read by:</span> Darshan Soni</h5>
+		<h5><span class="colophon-heading">Language:</span> <a href="/storybooks-poland/stories/en">angielski</a></h5>
+		<h5><span class="colophon-heading">Level:</span> <a href="/storybooks-poland/stories/en/level3">Level 3</a></h5>
+		<h5><span class="colophon-heading">Source:</span> <a href="https://africanstorybook.org/reader.php?id=13244" target="_blank">Sakima's song</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>
 
 		<div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</div>
 
@@ -752,10 +613,9 @@ He took his son and Sakima to hospital so Sakima could regain his sight.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/storybooks-poland/stories/en">Back to stories list</a> <a class="btn btn-lg" target="_blank" href="https://gitlab.com/global-asp/sbpl-pdf/raw/master/pdf/en/en-0315_sakima.pdf">Download PDF</a>
+	<a class="btn btn-lg" href="/storybooks-poland/stories/en" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
 <br><br>
 </div>
-
 
 
     </div>
